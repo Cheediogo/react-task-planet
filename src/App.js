@@ -1,8 +1,8 @@
 import { Container, Row } from 'react-bootstrap';
 import Navigationbar from './Component/Navigationbar'
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
 import Home from './Component/Home';
-import Characters from './Component/Characters';
+// import Characters from './Component/Characters';
 import { useState, useEffect } from 'react'
 import Loader from './Component/Loader';
 
@@ -23,7 +23,9 @@ function App() {
       <Container className="ps-md-5 bg-light app-height">
         <Row className="justify-content-center ps-5">
             <Navigationbar />
-            <Switch>
+            {content && <Home />}
+            {isPending && <Loader/>} 
+            {/* <Switch>
               <Route exact path="/">
               {content && <Home />}
               {isPending && <Loader/>} 
@@ -31,7 +33,7 @@ function App() {
               <Route path="/characters">
                 <Characters />
               </Route>
-            </Switch>
+            </Switch> */}
         </Row>
       </Container>
     </Router>
