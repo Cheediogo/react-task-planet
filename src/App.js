@@ -1,6 +1,6 @@
 import { Container, Row } from 'react-bootstrap';
 import Navigationbar from './Component/Navigationbar'
-import { HashRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Home from './Component/Home';
 import Characters from './Component/Characters';
 import { useState, useEffect } from 'react'
