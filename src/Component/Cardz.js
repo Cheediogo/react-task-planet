@@ -14,13 +14,13 @@ const Cardz = () => {
                 Cards.map(Cardd => {
                     return(
                         <div className="grid">
-                            <div className="Card ms-4" key={Cardd.Id} onClick={()=> setIsPlanetOpen(true)}>
+                            <div className="Card m-2" key={Cardd.Id} onClick={()=> setIsPlanetOpen(true)}>
                                 <div className="px-4 ">
-                                    <img src={ Cardd.PlanetImg } alt="person-img" className="card-img img-fluid"/>
+                                    <img src={ Cardd.PlanetImg } alt="person-img" className="card-img "/>
                                 </div>
                                 <div className="Card-body ps-3">
-                                    <div className="Card-title">{ Cardd.PlanetName }</div>
-                                    <div  className="Card-text text-muted">{ Cardd.Detail }</div>
+                                    <div className="Card-title fw-bold lh-1">{ Cardd.PlanetName }</div>
+                                    <div  className="Card-text text-muted mb-3">{ Cardd.Detail }</div>
                                 </div>
                                 <div onClick={() => setShow(true)} className={ `${ Cards[Cards.length-1].Id === Cardd.Id?"Add-Icon text-white text-center pt-1 ms-auto":"d-none" }` }><BsPlusLg /></div>
                             </div>
