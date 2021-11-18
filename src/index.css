@@ -44,9 +44,9 @@ body {
   color: #121c33 !important;
 }
 
-.nav-pills a.nav-link.active, .nav-pills .nav-link {
-    color: #000;
-    background-color: #c0c0c0;
+.nav-pills a.nav-link.active  {
+    color: #000 !important;
+    background-color: #c0c0c0 !important;
 }
 
 .nav-text1, .nav-text2 {
