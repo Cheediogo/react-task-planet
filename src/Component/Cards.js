@@ -10,6 +10,11 @@ import CharacterPopup from './CharacterPopup';
 const Caards = () => {
     const [show, setShow] = useState(false);
     const [isPlanetOpen, setIsPlanetOpen] = useState(false);
+    const[name, setName] = useState("")
+    const handleOpen = (name) => {
+        setIsPlanetOpen(true)
+        setName(name);
+    }
     
     return (
         <div className={`${isPlanetOpen?"Card-Container pt-2 ps-3 p-width":"Card-Container show-pwidth"}`}>
@@ -17,7 +22,7 @@ const Caards = () => {
                 Cards.map(Cardzz => {
                     return(
                         <div className="grid2">
-                            <div className="Card  m-2 bg-white" key={Cardzz.Id} onClick={()=> setIsPlanetOpen(true)}>
+                            <div className="Card  m-2 bg-white" key={Cardzz.Id} onClick={()=> handleOpen(Cardzz.CharacterName)}>
                             <div>
                                 <img src={ Cardzz.CharacterImg } alt="pic" className="Card-img img-fluid"/>
                             </div>  
@@ -32,7 +37,7 @@ const Caards = () => {
                 })
             }
             <ModalCharacter show={show} handleClose={() => setShow(false)}/>
-            <CharacterPopup isPlanetOpen={isPlanetOpen} setIsPlanetOpen={setIsPlanetOpen}/>
+            <CharacterPopup isPlanetOpen={isPlanetOpen} setIsPlanetOpen={setIsPlanetOpen} name={name}/>
         </div>
     )
 }

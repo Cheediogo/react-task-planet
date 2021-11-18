@@ -7,7 +7,9 @@ import characterfive from '../Assets/characters/characterfive.png'
 import characterthirteen from '../Assets/characters/characterthirteen.png'
 import characterfourteen from '../Assets/characters/characterfourteen.png';
 
-const CharacterPopup = ({isPlanetOpen, setIsPlanetOpen}) => {
+
+const CharacterPopup = ({isPlanetOpen, setIsPlanetOpen, name}) => {
+  
     return (
         <div className={`${isPlanetOpen?"card-container show-cardcontainer":"card-container"}`}>
             <div className="card card-pop" style={{ width: '25rem' }}>
@@ -15,8 +17,8 @@ const CharacterPopup = ({isPlanetOpen, setIsPlanetOpen}) => {
                     <div className="square mb-2 text-center" onClick={()=>setIsPlanetOpen(false)}><BsXLg/></div>
                 </div>
                 <div className="card-body">
-                    <h6  className="card-title fw-bold fs-4 pb-3">Jane Cooper</h6>
-                    <p className="card-text mb-2 text-muted lh-sm text">Jane is really a nice person. She's been living on planet Alpha for the last 10 years. </p>
+                    <h6  className="card-title fw-bold fs-4 pb-3">{name}</h6>
+                    <p className="card-text mb-2 text-muted lh-sm text">{name.match(/[^\s]+/)} is really a nice person. She's been living on planet Alpha for the last 10 years. </p>
                     <div className="alpha-content">
                         <div className="alpha-txt">
                             <p className="card-text pt-1 mb-0">Planet</p>
