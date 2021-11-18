@@ -18,7 +18,7 @@ function NavDropdownExample() {
                 CHARACTERS
                 </Nav.Link>
             </Nav.Item>
-            <NavDropdown title="Planet: All" id="nav-dropdown" className="ms-md-auto me-md-5 me-lg-0 fw-bold btn p-0 border-0 navdrop-link">
+            <NavDropdown title="Planet: All" id="nav-dropdown" className="ms-md-auto me-md-5 me-lg-0 fw-bold btn pe-4 border-0 navdrop-link">
                 <NavDropdown.Item eventKey="4.1">Brooklyn Simmons</NavDropdown.Item>
                 <NavDropdown.Item eventKey="4.2">Jane Cooper</NavDropdown.Item>
                 <NavDropdown.Item eventKey="4.3">Planet Alpha</NavDropdown.Item>

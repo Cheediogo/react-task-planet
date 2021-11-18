@@ -19,8 +19,9 @@ function App() {
   },[])
 
   return (
-    <Router>
-      <Container className="ps-md-5 bg-light app-height">
+    <div className="bg-light pb-5">
+      <Router>
+      <Container className="app-height">
         <Row className="justify-content-center ps-5">
             <Navigationbar />
             <Switch>
@@ -35,6 +36,7 @@ function App() {
         </Row>
       </Container>
     </Router>
+    </div>
   );
 }
 

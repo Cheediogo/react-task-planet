@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 function NavDropdownExample() {
   
     return (
-      <Container>
+      <div>
             <Nav variant="pills" activeKey="1" className="">
                 <Nav.Item>
                     <Nav.Link eventKey="1" as={Link} to="/" className="nav-text1">
@@ -18,7 +18,7 @@ function NavDropdownExample() {
                     </Nav.Link>
                 </Nav.Item>
             </Nav>
-      </Container>
+      </div>
     );
   }
   

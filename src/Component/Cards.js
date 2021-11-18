@@ -16,15 +16,17 @@ const Caards = () => {
             {
                 Cards.map(Cardzz => {
                     return(
-                        <div className="Card grid2 m-2 bg-white" key={Cardzz.Id} onClick={()=> setIsPlanetOpen(true)}>
+                        <div className="grid2">
+                            <div className="Card  m-2 bg-white" key={Cardzz.Id} onClick={()=> setIsPlanetOpen(true)}>
                             <div>
                                 <img src={ Cardzz.CharacterImg } alt="pic" className="Card-img img-fluid"/>
                             </div>  
                             <div className="Card-Body pt-2 ps-3">
                                 <h6 className="Card-Title">{ Cardzz.CharacterName }</h6>
                                 <p className="Card-Text text-muted">{ Cardzz.Info }</p>
-                            </div>   
-                            <div onClick={() => setShow(true)} className={ `${ Cards[Cards.length-1].Id === Cardzz.Id?"Add-Icon text-white text-center pt-1 ms-auto":"d-none" }` }><BsPlusLg /></div>       
+                            </div>        
+                        </div>
+                        <div onClick={() => setShow(true)} className={ `${ Cards[Cards.length-1].Id === Cardzz.Id?"Add-Icon text-white text-center pt-1 ms-auto":"d-none" }` }><BsPlusLg /></div>
                         </div>
                     )
                 })

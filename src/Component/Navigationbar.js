@@ -5,9 +5,9 @@ import { Container, Navbar} from 'react-bootstrap';
 const Navigationbar = () => {
     return (
         <Navbar expand="lg" variant="light" >
-          <Container>
+          <div>
               <Navbar.Brand href="#">Spacious</Navbar.Brand>
-          </Container>
+          </div>
         </Navbar>
     )
 }
